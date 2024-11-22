@@ -1,17 +1,19 @@
-import { useState } from 'react'
-
-import SignUp from './Components/SignUp/SignUp'
-import Login from './Components/Login/Login'
+import SignUp from "./Pages/SignUp/SignUp";
+import Login from "./Pages/Login/Login";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <SignUp/>
-    <Login/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
