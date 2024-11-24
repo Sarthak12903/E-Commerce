@@ -58,13 +58,13 @@ function SignUp() {
             />
             <label htmlFor="terms" className="text-gray-600 text-sm">
               I accept the{" "}
-              <a href="#" className="text-blue-500 underline">
+              <Link to={"/"} className="text-blue-500 underline">
                 Terms
-              </a>{" "}
-              and{" "}
-              <a href="#" className="text-blue-500 underline">
+              </Link>
+              and
+              <Link to={"/"}  className="text-blue-500 underline">
                 Privacy Policy
-              </a>
+              </Link>
               .
             </label>
           </div>
@@ -78,13 +78,13 @@ function SignUp() {
             <div className="line h-px bg-gray-300 flex-1"></div>
           </div>
 
-          <button className="bg-background w-full flex items-center justify-center space-x-3 border border-gray-300 p-2 rounded-md hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button className="bg-white w-full flex items-center justify-center space-x-3 border border-gray-300 p-2 rounded-md hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <img
               src="/Images/google.jpeg"
               alt=""
               className="w-7 h-7 rounded-full"
             />
-            <p>Sign in with Google</p>
+            <p className="font-semibold">Sign in with Google</p>
           </button>
           <div className="Login text-center">
             Do you have an account?{" "}
