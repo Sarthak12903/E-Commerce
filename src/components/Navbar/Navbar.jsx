@@ -32,7 +32,7 @@ export default function Navbar() {
         </button>
         <div className="relative w-full flex justify-center items-center">
           <button
-            className="flex justify-center items-center text-xl mt-1"
+            className="flex justify-center items-center text-xl "
             onClick={handleDropDown}
           >
             More
