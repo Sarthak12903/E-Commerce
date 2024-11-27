@@ -2,15 +2,27 @@ import { MdShoppingCart } from "react-icons/md";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 export default function Navbar() {
   const [logged, setLogged] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const dropDownRef = useRef(null);
   const handleDropDown = () => {
     setDropDown(!dropDown);
   };
+  const handleClickOutside = (e) => {
+    if (dropDownRef.current && !dropDownRef.current.contains(e.target)) {
+      setDropDown(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
-    <nav className="flex justify-center items-center w-full sm:h-20  min-w-fit bg-orange-500  ">
+    <nav className="flex select-none justify-center items-center w-full sm:h-20  min-w-fit bg-orange-500  ">
       <h1 className="text-white text-3xl font-sans font-semibold flex flex-col justify-center items-center ml-2">
         Shopmart<span className="text-xs">Explore Your Desire</span>
       </h1>
@@ -32,6 +44,7 @@ export default function Navbar() {
         </button>
         <div className="relative w-full flex justify-center items-center">
           <button
+            ref={dropDownRef}
             className="flex justify-center items-center text-xl "
             onClick={handleDropDown}
           >
@@ -39,25 +52,25 @@ export default function Navbar() {
             <MdOutlineKeyboardArrowDown
               className={`${
                 dropDown && "-rotate-180 "
-              } transition-all ease-linear duration-300`}
+              } transition-all ease-linear duration-200`}
             />{" "}
           </button>
           <ul
-            className={`absolute top-14 w-56 bg-orange-200 rounded-b-3xl text-black p-4 space-y-2 transition-all ease-linear duration-200 transform ${
+            className={`absolute top-14 w-56 bg-white select-none border-orange-400 border-[1px] shadow-lg rounded-b-3xl text-black p-4 space-y-2 transition-all ease-linear duration-200 transform ${
               dropDown
                 ? "opacity-100 translate-y-0 visible"
                 : "opacity-0 -translate-y-1 invisible"
             }`}
           >
-            <li className="hover:bg-orange-300 rounded-lg w-full h-full p-2 px-4 cursor-pointer">
+            <li className="hover:bg-slate-100 rounded-lg w-full h-full p-2 px-4 cursor-pointer">
               Notifications
             </li>
             <hr />
-            <li className="hover:bg-orange-300 rounded-lg w-full h-full p-2 px-4 cursor-pointer">
+            <li className="hover:bg-slate-100 rounded-lg w-full h-full p-2 px-4 cursor-pointer">
               24/7 Customer Care
             </li>
             <hr />
-            <li className="hover:bg-orange-300 rounded-lg w-full h-full p-2 px-4 cursor-pointer">
+            <li className="hover:bg-slate-100 rounded-lg w-full h-full p-2 px-4 cursor-pointer">
               Advertise
             </li>
           </ul>
