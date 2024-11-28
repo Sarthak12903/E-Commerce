@@ -56,7 +56,7 @@ export default function Navbar() {
             />{" "}
           </button>
           <ul
-            className={`absolute top-14 w-56 bg-white select-none border-orange-400 border-[1px] shadow-lg rounded-b-3xl text-black p-4 space-y-2 transition-all ease-linear duration-200 transform ${
+            className={`absolute top-14 w-56 bg-white z-30 select-none border-orange-400 border-[1px] shadow-lg rounded-b-3xl text-black p-4 space-y-2 transition-all ease-linear duration-200 transform ${
               dropDown
                 ? "opacity-100 translate-y-0 visible"
                 : "opacity-0 -translate-y-1 invisible"
