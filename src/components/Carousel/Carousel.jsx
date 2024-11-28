@@ -2,13 +2,13 @@ import { useState } from "react";
 
 const Carousel = () => {
   const slides = [
-    { id: 1, url: "/0511ba08d5abe9aa.jpg.webp" },
-    { id: 2, url: "/1316eb53d6f52c71.jpg.webp" },
-    { id: 3, url: "/69841ae2338de519.jpeg.webp" },
-    { id: 4, url: "/a76db078b31108e1.jpeg.webp" },
-    { id: 3, url: "/cf3eceea3f859d00.jpeg.webp" },
-    { id: 3, url: "/dd484f1b19c67712.jpg.webp" },
-    { id: 3, url: "/f7b74e32c435adb6.jpg.webp" },
+    { id: 1, url: "/Carousel/0511ba08d5abe9aa.jpg.webp" },
+    { id: 2, url: "/Carousel/1316eb53d6f52c71.jpg.webp" },
+    { id: 3, url: "/Carousel/69841ae2338de519.jpeg.webp" },
+    { id: 4, url: "/Carousel/a76db078b31108e1.jpeg.webp" },
+    { id: 3, url: "/Carousel/cf3eceea3f859d00.jpeg.webp" },
+    { id: 3, url: "/Carousel/dd484f1b19c67712.jpg.webp" },
+    { id: 3, url: "/Carousel/f7b74e32c435adb6.jpg.webp" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
