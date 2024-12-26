@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Carousel = () => {
   const slides = [
@@ -24,6 +24,14 @@ const Carousel = () => {
       prevIndex === slides.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  useEffect(() => {
+    const transition = setInterval(goToNext, 5000);
+
+    return () => {
+      clearInterval(transition);
+    };
+  }, []);
 
   return (
     <div className="relative w-full min-w-4xl mx-auto overflow-hidden">

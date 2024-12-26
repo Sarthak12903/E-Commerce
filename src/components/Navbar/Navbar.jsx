@@ -23,7 +23,7 @@ export default function Navbar() {
   }, []);
   return (
     <nav className="flex select-none justify-center items-center w-full sm:h-20  min-w-fit bg-orange-500  ">
-      <h1 className="text-white text-3xl font-sans font-semibold flex flex-col justify-center items-center ml-2">
+      <h1 className="text-white text-3xl font-sans font-semibold flex flex-col justify-center items-center ml-2 cursor-default">
         Shopmart<span className="text-xs">Explore Your Desire</span>
       </h1>
       <div className="w-[30rem] rounded-lg overflow-hidden flex justify-center items-center mx-20 min-w-56 ">
