@@ -5,8 +5,14 @@ import { IoHomeOutline } from "react-icons/io5";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { MdFlightTakeoff } from "react-icons/md";
 import { Blocks, Bike } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function DashList() {
+  const navigate=useNavigate()
+  const handleSelection=(route)=>{
+     navigate(`/${route.toLowerCase()}`)
+
+  }
   const items = [
     { itemno: 1, itemName: "Mobiles", itemIcon: FaMobileScreenButton },
     { itemno: 2, itemName: "Grocery", itemIcon: BsHandbag },
@@ -30,7 +36,10 @@ export default function DashList() {
   return (
     <ul className="flex justify-around items-center bg-orange-200 p-2 select-none">
       {items.map((value) => (
-        <li
+        <li 
+         onClick={()=>handleSelection(value.itemName)}
+
+        
           key={value.itemno}
           className="cursor-pointer px-4 py-2 rounded-lg flex flex-col justify-center items-center hover:bg-orange-500 group active:scale-95"
         >

@@ -9,14 +9,43 @@ const ProductCategories = ({ name }) => {
         <CategorialHeading name={"Bestsellers of the week"} />
 
         <div className="flex  gap-4 ">
-          <ProductTile />
-          <ProductTile />
-          <ProductTile /> 
+          <ProductTile
+            href="\CategoriesImg\BestsellerImg\bestseller1.webp"
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\BestsellerImg\bestseller2.png"
+            
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\BestsellerImg\bestseller3.webp"
+            
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
         </div>
         <div className="flex gap-4 ">
-          <ProductTile />
-          <ProductTile />  
-          <ProductTile />
+          <ProductTile
+            href="\CategoriesImg\BestsellerImg\bestseller4.webp"
+            
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\BestsellerImg\bestseller5.webp"
+            
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\BestsellerImg\bestseller6.webp"
+            
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
         </div>
       </div>
 
@@ -24,14 +53,38 @@ const ProductCategories = ({ name }) => {
         <CategorialHeading name={"Trending Accesories"} />
 
         <div className="flex gap-4 ">
-          <ProductTile />
-          <ProductTile />
-          <ProductTile />
+          <ProductTile
+            href="CategoriesImg\Accesories\accesories2brutonshoe.webp"
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\Accesories\accesories5lethrbracelette.webp"
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\Accesories\accesories6cap.webp"
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
         </div>
         <div className="flex gap-4 ">
-          <ProductTile />
-          <ProductTile />
-          <ProductTile />
+          <ProductTile
+            href="\CategoriesImg\Accesories\accesories4samsungsmartwatch.webp"
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\Accesories\accesories1herfashion.webp"
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
+          <ProductTile
+            href="\CategoriesImg\Accesories\accesories3firnessyogamat.webp"
+            name="Calvin Klein & more"
+            discount="Min 30% Discount"
+          />
         </div>
       </div>
     </div>
