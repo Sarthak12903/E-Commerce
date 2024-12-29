@@ -1,10 +1,12 @@
 import React from "react";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import { FaIndianRupeeSign } from "react-icons/fa6";
+import { MdOutlineStar } from "react-icons/md";
+
 
 const MobileTile = ({mobileName, moPrice, mobileImg,rating,moRating,moReviews, moSize ,moRam, moCamera,moBattery,moProcessor,moWarrenty}) => {
   return (
-    <div className="flex p-4 w-auto items-start gap-2 pr-20">
+    <div className="flex p-4 w-auto items-start gap-2 border-2 border-gray-100 pr-20">
       <div className="p-6">
         <img className="w-[12rem] h-[14rem]" src={mobileImg || '\CategoriesImg\Mobiles\samsungs23.webp'} alt="" />
       </div> 
@@ -13,8 +15,10 @@ const MobileTile = ({mobileName, moPrice, mobileImg,rating,moRating,moReviews, m
         <h1 className=" pt-1 px-1 text-[1.2rem] font-semibold">{mobileName|| 'Name not retrived'}</h1>
         <p className="text-sm text-grey-100 flex items-center justify-start gap-4 p-2">
           <div
-            className="h-[1.2rem] w-[2.4rem] text-white flex justify-center items-center rounded-sm bg-green-600">
+            className="h-[1.2rem] w-[2.5rem] text-white gap-0.5 font-semibold flex justify-center items-center rounded-sm bg-green-600">
           {rating ||"0.0"}
+          <MdOutlineStar />
+
          </div>
           <p className="text-gray-500 font-semibold">{moRating ||"Loading"} Rating & {moReviews || "Loading"}  Reviews</p>
         </p>
@@ -44,7 +48,7 @@ const MobileTile = ({mobileName, moPrice, mobileImg,rating,moRating,moReviews, m
         <p className="text-sm">Free Delivery</p>
         <p className="flex items-end text-[0.7rem] font-semibold text-orange-600">
         
-          <p>Upto  </p> <LiaRupeeSignSolid className="h-[1rem] w-[1rem] "/> <p>750 Off on Airtel Offer</p>
+          <p>Upto  </p> <LiaRupeeSignSolid className="h-[0.9rem] w-[0.9rem] "/> <p>750 Off on Airtel Offer</p>
         </p>
         <p className="flex items-center text-[0.8rem] ">
         

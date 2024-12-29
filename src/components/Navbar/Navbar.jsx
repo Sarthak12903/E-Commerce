@@ -53,7 +53,7 @@ export default function Navbar() {
               className={`${
                 dropDown && "-rotate-180 "
               } transition-all ease-linear duration-200`}
-            />{" "}
+            />
           </button>
           <ul
             className={`absolute top-14 w-56 bg-white z-30 select-none border-orange-400 border-[1px] shadow-lg rounded-b-3xl text-black p-4 space-y-2 transition-all ease-linear duration-200 transform ${
@@ -82,7 +82,6 @@ export default function Navbar() {
           </button>
         ) : (
           <button className="text-xl px-10 py-1 bg-white text-orange-500 hover:bg-slate-200 active:scale-95 rounded-lg mr-2">
-            {" "}
             Login
           </button>
         )}
